@@ -41,6 +41,6 @@ I got the idea from an answer on [stackoverflow][1] check it out.
 MIT [http://rem.mit-license.org][2]
 
 
-[1]: http://http://stackoverflow.com/a/20505898/5751341
+[1]: http://stackoverflow.com/a/20505898/5751341
 [2]: http://rem.mit-license.org
 [3]: http://fortiapp.github.io/detect-adblocker/example.html
