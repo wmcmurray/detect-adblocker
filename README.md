@@ -1,5 +1,5 @@
 # detect-adblocker
-You can use this to detect if the ad blocker is enabled on the visitor browser
+You can use this to detect if the ad blocker is enabled on the visitor browser. See the result in action on the [Example][3] page.
 
 ## Installation
 
