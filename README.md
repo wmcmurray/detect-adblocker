@@ -23,6 +23,8 @@ Now you only need to check for adblocker variable in your code
     }else{
         // ad blocker is not enabled
     }
+    
+> To see this in action check the example page [Example][3]
 
 ## Contributing
 
@@ -41,3 +43,4 @@ MIT [http://rem.mit-license.org][2]
 
 [1]: http://http://stackoverflow.com/a/20505898/5751341
 [2]: http://rem.mit-license.org
+[3]: http://fortiapp.github.io/detect-adblocker/example.html
