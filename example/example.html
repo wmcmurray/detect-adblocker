@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ads blocker test</title>
+
+    <!--adBlocker detection code - START-->
+    <script src="//adblocker.fortiapp.com/ads.js"></script>
+    <script>
+        (function (i, o, g, r) {
+            i[o] = (typeof i[o] == typeof undefined) ? g : r
+        })(window, 'adblocker', true, false);
+    </script>
+    <!--adBlocker detection code - END-->
+
+    <style>
+        h1 {
+            font: bold 28px arial, sans-serif;
+            color: #444444;
+            border: 1px solid #aaa;
+            padding: 5px;
+            border-radius: 3px;
+            background: #ffe;
+        }
+
+        p {
+            font: 14px arial, sans-serif;
+        }
+
+        p span {
+            padding: 3px 6px;
+            border: 1px solid #444444;
+            border-radius: 3px;
+        }
+
+        .red {
+            color: #ffffff;
+            background-color: #ff0000;
+        }
+
+        .green {
+            color: #ffffff;
+            background-color: #008000;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Ad blocker detector</h1>
+<p>Ad blocker is: <span id="tag" class="red">Active</span></p>
+<script>
+    var tag = document.getElementById('tag');
+    if (!adblocker) {
+        tag.className = 'green';
+        tag.innerHTML = 'disabled'
+    }
+</script>
+</body>
+</html>
