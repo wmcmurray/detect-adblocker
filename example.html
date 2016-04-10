@@ -2,12 +2,50 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Detect Ad Blocker by Fortiapp</title>
+    <title>Detect Ad Blocker by Fortiapp - Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <style>
+        h1 {
+            font: bold 28px arial, sans-serif;
+            color: #444444;
+            border: 1px solid #aaa;
+            padding: 5px;
+            border-radius: 3px;
+            background: #ffe;
+        }
+
+        p {
+            font: 14px arial, sans-serif;
+        }
+
+        p span {
+            padding: 3px 6px;
+            border: 1px solid #444444;
+            border-radius: 3px;
+        }
+
+        .red {
+            color: #ffffff;
+            background-color: #ff0000;
+        }
+
+        .green {
+            color: #ffffff;
+            background-color: #008000;
+        }
+    </style>
+    <!--adBlocker detection code - START-->
+    <script src="//adblocker.fortiapp.com/ads.js"></script>
+    <script>
+        (function (i, o, g, r) {
+            i[o] = (typeof i[o] == typeof undefined) ? g : r
+        })(window, 'adblocker', true, false);
+    </script>
+    <!--adBlocker detection code - END-->
   </head>
   <body>
     <section class="page-header">
@@ -20,52 +58,18 @@
 
     <section class="main-content">
       <h1>
-<a id="detect-adblocker" class="anchor" href="#detect-adblocker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>detect-adblocker</h1>
+<a id="detect-adblocker" class="anchor" href="#detect-adblocker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h1>
 
-<p>You can use this to detect if the ad blocker is enabled on the visitor browser</p>
+<p>Try to enable and disabel ad blocker in your browser and refresh the page then check the results</p>
 
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
-
-<p>Using this tool is very simple you only need to place the following before any script tag in your web page as the following:</p>
-
-<pre><code>&lt;!--adBlocker detection code - START--&gt;
-&lt;script src="//adblocker.fortiapp.com/ads.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    (function (i, o, g, r) {
-        i[o] = (typeof i[o] == typeof undefined) ? g : r
-    })(window, 'adblocker', true, false);
-&lt;/script&gt;
-&lt;!--adBlocker detection code - END--&gt;
-</code></pre>
-
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>Now you only need to check for adblocker variable in your code</p>
-
-<pre><code>if (adblocker) {
-    // the add blocker is enabled
-}else{
-    // ad blocker is not enabled
-}
-</code></pre>
-
-<h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
-
-<p>I'm will be very happy if any one wants to contribute to this repo</p>
-
-<h2>
-<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Credits</h2>
-
-<p>I got the idea from an answer on <a href="http://http://stackoverflow.com/a/20505898/5751341">stackoverflow</a> check it out.</p>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
-
-<p>MIT <a href="http://rem.mit-license.org">http://rem.mit-license.org</a></p>
-
+<p>Ad blocker is: <span id="tag" class="red">Active</span></p>
+<script>
+    var tag = document.getElementById('tag');
+    if (!adblocker) {
+        tag.className = 'green';
+        tag.innerHTML = 'disabled'
+    }
+</script>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Fortiapp/detect-adblocker">Detect Ad Blocker</a> is maintained by <a href="https://github.com/Fortiapp">Fortiapp</a>.</span>
 
