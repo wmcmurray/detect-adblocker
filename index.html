@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Detect Ad Blocker by Fortiapp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,51 +9,94 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-76217825-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-76217825-1', 'auto');
+        ga('send', 'pageview');
 
-</script>
-  </head>
-  <body>
-    <form id="donateButton" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="DRQE6392SDGY6">
-<table>
-<tr><td><input type="hidden" name="on0" value="Donate">Donate</td></tr><tr><td><select name="os0">
-	<option value="Donate">Donate $1.00 USD</option>
-	<option value="Donate">Donate $5.00 USD</option>
-	<option value="Donate">Donate $10.00 USD</option>
-	<option value="Donate">Donate $20.00 USD</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://adblocker.fortiapp.com/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </script>
+    <style>
+        form#donateButton {
+            position: absolute;
+            padding: 5px;
+            margin: 15px;
+            border: 1px solid #52A691;
+            border-radius: 0.3rem;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        form#donateButton select {
+            background: #fff;
+            border-radius: 0.3rem;
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #606c71;
+        }
+
+        form#donateButton input[type="image"] {
+            width: 100px;
+            margin: 5px 30px;
+        }
+    </style>
+</head>
+<body>
+<form id="donateButton" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="DRQE6392SDGY6">
+    <table>
+        <tr>
+            <td><input type="hidden" name="on0" value="Donate">Donate</td>
+        </tr>
+        <tr>
+            <td><select name="os0">
+                <option value="Donate">Donate $1.00 USD</option>
+                <option value="Donate">Donate $5.00 USD</option>
+                <option value="Donate">Donate $10.00 USD</option>
+                <option value="Donate">Donate $20.00 USD</option>
+            </select></td>
+        </tr>
+    </table>
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="image" src="https://adblocker.fortiapp.com/donate.png" border="0" name="submit"
+           alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-    <section class="page-header">
-      <h1 class="project-name">Detect Ad Blocker</h1>
-      <h2 class="project-tagline">You can use this to detect if the ad blocker is enabled on the visitor browser</h2>
-      <a href="https://github.com/Fortiapp/detect-adblocker" class="btn">View on GitHub</a>
-      <a href="https://github.com/Fortiapp/detect-adblocker/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/Fortiapp/detect-adblocker/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<section class="page-header">
+    <h1 class="project-name">Detect Ad Blocker</h1>
+    <h2 class="project-tagline">You can use this to detect if the ad blocker is enabled on the visitor browser</h2>
+    <a href="https://github.com/Fortiapp/detect-adblocker" class="btn">View on GitHub</a>
+    <a href="https://github.com/Fortiapp/detect-adblocker/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/Fortiapp/detect-adblocker/tarball/master" class="btn">Download .tar.gz</a>
+</section>
 
-    <section class="main-content">
-      <h1>
-<a id="detect-adblocker" class="anchor" href="#detect-adblocker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>detect-adblocker</h1>
+<section class="main-content">
+    <h1>
+        <a id="detect-adblocker" class="anchor" href="#detect-adblocker" aria-hidden="true"><span aria-hidden="true"
+                                                                                                  class="octicon octicon-link"></span></a>detect-adblocker
+    </h1>
 
-<p>You can use this to detect if the ad blocker is enabled on the visitor browser. See the result in action from the <a href="http://fortiapp.github.io/detect-adblocker/example.html">Example</a> page</p>
+    <p>You can use this to detect if the ad blocker is enabled on the visitor browser. See the result in action from the
+        <a href="http://fortiapp.github.io/detect-adblocker/example.html">Example</a> page</p>
 
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+    <h2>
+        <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true"
+                                                                                          class="octicon octicon-link"></span></a>Installation
+    </h2>
 
-<p>Using this tool is very simple you only need to place the following before any script tag in your web page as the following:</p>
+    <p>Using this tool is very simple you only need to place the following before any script tag in your web page as the
+        following:</p>
 
 <pre><code>&lt;!--adBlocker detection code - START--&gt;
 &lt;script src="//adblocker.fortiapp.com/ads.js"&gt;&lt;/script&gt;
@@ -65,10 +108,12 @@
 &lt;!--adBlocker detection code - END--&gt;
 </code></pre>
 
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+    <h2>
+        <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true"
+                                                                            class="octicon octicon-link"></span></a>Usage
+    </h2>
 
-<p>Now you only need to check for adblocker variable in your code</p>
+    <p>Now you only need to check for adblocker variable in your code</p>
 
 <pre><code>if (adblocker) {
     // the add blocker is enabled
@@ -77,33 +122,44 @@
 }
 </code></pre>
 
-<blockquote>
-<p>To see this in action check the example page <a href="http://fortiapp.github.io/detect-adblocker/example.html">Example</a></p>
-</blockquote>
+    <blockquote>
+        <p>To see this in action check the example page <a
+                href="http://fortiapp.github.io/detect-adblocker/example.html">Example</a></p>
+    </blockquote>
 
-<h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+    <h2>
+        <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true"
+                                                                                          class="octicon octicon-link"></span></a>Contributing
+    </h2>
 
-<p>I'm will be very happy if any one wants to contribute to this repo</p>
+    <p>I'm will be very happy if any one wants to contribute to this repo</p>
 
-<h2>
-<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Credits</h2>
+    <h2>
+        <a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true"
+                                                                                class="octicon octicon-link"></span></a>Credits
+    </h2>
 
-<p>I got the idea from an answer on <a href="http://stackoverflow.com/a/20505898/5751341">stackoverflow</a> check it out.</p>
+    <p>I got the idea from an answer on <a href="http://stackoverflow.com/a/20505898/5751341">stackoverflow</a> check it
+        out.</p>
 
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+    <h2>
+        <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true"
+                                                                                class="octicon octicon-link"></span></a>License
+    </h2>
 
-<p>MIT <a href="http://rem.mit-license.org">http://rem.mit-license.org</a></p>
+    <p>MIT <a href="http://rem.mit-license.org">http://rem.mit-license.org</a></p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Fortiapp/detect-adblocker">Detect Ad Blocker</a> is maintained by <a href="https://github.com/Fortiapp">Fortiapp</a>.</span>
+    <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Fortiapp/detect-adblocker">Detect Ad Blocker</a> is maintained by <a
+                href="https://github.com/Fortiapp">Fortiapp</a>.</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a
+                href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a
+                href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+    </footer>
 
-    </section>
+</section>
 
-  
-  </body>
+
+</body>
 </html>
