@@ -5,6 +5,8 @@ You can use this to detect if the ad blocker is enabled on the visitor browser. 
 
 Using this tool is very simple you only need to place the following before any script tag in your web page as the following:
 
+> **When you use my servers for the ads file I will show one ad per user every 24 hours to support the project. If you don't want to support me you can host the file on your own server.**
+
     <!--adBlocker detection code - START-->
     <script src="//adblocker.fortiapp.com/ads.js"></script>
     <script>
