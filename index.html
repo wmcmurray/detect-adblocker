@@ -93,11 +93,17 @@
                                                                                           class="octicon octicon-link"></span></a>Installation
     </h2>
 
-    <p>Using this tool is very simple you only need to place the following before any script tag in your web page as the
-        following:</p>
+    <p>Using this tool is very simple. First you need to create a file and put the following in this file:</p>
+    <pre><code>(function (i, o, g) {
+    i[o] = g;
+})(window, 'adblocker', false);
+</code></pre>
+    
+<p>Now save the file with a name <code>ads.js</code> and upload it to a known location on your server.
 
+finally you only need to place the following before any script tag in your web page as the following:</p>
 <pre><code>&lt;!--adBlocker detection code - START--&gt;
-&lt;script src="//adblocker.fortiapp.com/ads.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/ads.js"&gt;&lt;/script&gt;
 &lt;script&gt;
     (function (i, o, g, r) {
         i[o] = (typeof i[o] == typeof undefined) ? g : r
