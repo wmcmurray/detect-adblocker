@@ -29,7 +29,7 @@ Now save the file with a name `ads.js` and upload it to a known location on your
 Now you only need to check for adblocker variable in your code
 
     if (adblocker) {
-        // the add blocker is enabled
+        // the ad blocker is enabled
     }else{
         // ad blocker is not enabled
     }
